@@ -8,7 +8,7 @@ const container = {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3
+        staggerChildren: 0.2
       },
     onlyOnce: {
         once: true,
@@ -22,6 +22,11 @@ const children = {
     show: { opacity: 1 }
 }
 
+const line = {
+    hidden: { width: '0px', opacity: 0 },
+    show: { width: '100%', opacity: 1 }
+}
+
 function MakeProject({ type, title, description1, description2, url, gitLink, webLink}: { type: string, title: string, description1: string, description2: string, url: string, gitLink: string, webLink: string}) {
     return (
     <motion.section className={styles.project} variants={ container } initial='hidden' whileInView='show' viewport={{ once: true, margin: '-200px 0px'}}>
@@ -29,7 +34,7 @@ function MakeProject({ type, title, description1, description2, url, gitLink, we
         <motion.h3 className={styles.title} variants={ children } >{title ? title : "Default title"}</motion.h3>
         <motion.p className={styles.description} variants={ children } >{description1 ? description1 : "Default description"}</motion.p>
         <motion.p className={styles.description} variants={ children } >{description2 ? description2 : "Default description"}</motion.p>
-        <motion.hr className={styles.line} initial={{ opacity: 0, width: 0}} whileInView={{ opacity: 1, width: '100%'}} viewport={{ margin: '-200px 0px'} } />
+        <motion.hr className={styles.line} variants={ line } />
         <motion.div className={styles.imagesContainer} variants={ children } >
         <Image className={styles.image} src={url} alt="" width='300' height='300'/>
         </motion.div>
