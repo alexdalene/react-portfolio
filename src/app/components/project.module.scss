@@ -33,14 +33,8 @@
         font-size: 18px;
     }
 
-    .fontAndColor {
-        display: flex;
-        justify-content: space-between;
-        font-family: 'PP Neue Montreal Bold', sans-serif;
-        overflow: hidden;
-        text-transform: uppercase;
-        gap: 0.3rem;
-        color: #25EFA6;
+    .line {
+        border-color: #25EFA6;
     }
 
     .links {
@@ -62,10 +56,8 @@
     }
 
     .image {
-        max-width: 350px;
-        max-height: 350px;
-        object-fit: cover;
-        align-self: center;
-        border-radius: 5%;
+        width: 100%;
+        height: 100%;
+        align-self: flex-end;
     }
 }

@@ -8,12 +8,7 @@ function MakeProject({ type, title, description1, description2, url, gitLink, we
         <h3 className={styles.title}>{title ? title : "Default title"}</h3>
         <p className={styles.description}>{description1 ? description1 : "Default description"}</p>
         <p className={styles.description}>{description2 ? description2 : "Default description"}</p>
-        <div className={styles.fontAndColor}>
-            <p>{title}</p>
-            <p>{title}</p>
-            <p>{title}</p>
-            <p>{title}</p>
-        </div>
+        <hr className={styles.line}/>
         <Image className={styles.image} src={url} alt="" width='300' height='300'/>
         <div className={styles.links}>
             <a href={gitLink} target='_blank'>GitHub</a>
