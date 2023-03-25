@@ -3,19 +3,40 @@ import styles from './project.module.scss'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      },
+    onlyOnce: {
+        once: true,
+        margin: '-200px 0px'
+    }
+    }
+}
+
+const children = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+}
+
 function MakeProject({ type, title, description1, description2, url, gitLink, webLink}: { type: string, title: string, description1: string, description2: string, url: string, gitLink: string, webLink: string}) {
     return (
-    <motion.section className={styles.project} initial={{ opacity: 0}} whileInView={{ opacity: 1 }} viewport={{ once: true, margin: '-200px 0px' }}>
-        <h4 className={styles.type}>{type ? type : "Default type"}</h4>
-        <h3 className={styles.title}>{title ? title : "Default title"}</h3>
-        <p className={styles.description}>{description1 ? description1 : "Default description"}</p>
-        <p className={styles.description}>{description2 ? description2 : "Default description"}</p>
+    <motion.section className={styles.project} variants={ container } initial='hidden' whileInView='show' viewport={{ once: true, margin: '-200px 0px'}}>
+        <motion.h4 className={styles.type} variants={ children } >{type ? type : "Default type"}</motion.h4>
+        <motion.h3 className={styles.title} variants={ children } >{title ? title : "Default title"}</motion.h3>
+        <motion.p className={styles.description} variants={ children } >{description1 ? description1 : "Default description"}</motion.p>
+        <motion.p className={styles.description} variants={ children } >{description2 ? description2 : "Default description"}</motion.p>
         <motion.hr className={styles.line} initial={{ opacity: 0, width: 0}} whileInView={{ opacity: 1, width: '100%'}} viewport={{ margin: '-200px 0px'} } />
+        <motion.div className={styles.imagesContainer} variants={ children } >
         <Image className={styles.image} src={url} alt="" width='300' height='300'/>
-        <div className={styles.links}>
-            <a href={gitLink} target='_blank'>GitHub</a>
-            <a href={webLink} target='_blank'>Website</a>
-        </div>
+        </motion.div>
+        <motion.div className={styles.links} variants={ children } >
+            <motion.a href={gitLink} target='_blank'>GitHub</motion.a>
+            <motion.a href={webLink} target='_blank'>Website</motion.a>
+        </motion.div>
     </motion.section>
     )
 }
