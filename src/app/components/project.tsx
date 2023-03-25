@@ -1,4 +1,5 @@
 import styles from './project.module.scss'
+import Image from 'next/image'
 
 function MakeProject({ type, title, description1, description2, url, gitLink, webLink}: { type: string, title: string, description1: string, description2: string, url: string, gitLink: string, webLink: string}) {
     return (
@@ -13,7 +14,7 @@ function MakeProject({ type, title, description1, description2, url, gitLink, we
             <p>{title}</p>
             <p>{title}</p>
         </div>
-        <img className={styles.image} src={url} alt="" />
+        <Image className={styles.image} src={url} alt="" width='300' height='300'/>
         <div className={styles.links}>
             <a href={gitLink} target='_blank'>GitHub</a>
             <a href={webLink} target='_blank'>Website</a>
