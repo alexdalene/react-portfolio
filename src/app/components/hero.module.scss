@@ -1,0 +1,26 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 16px;
+
+    .title {
+        font-family:'PP Neue Montreal Bold', sans-serif;
+        font-size: 54px;
+        line-height: 0.8;
+        border-bottom: 1.5px solid white;
+    }
+
+    .paragraph {
+        font-family: 'PP Neue Montreal Book', sans-serif;
+        font-size: 24px;
+        max-width: 205px;
+
+        em {
+            font-family: 'PP Neue Montreal Bold', sans-serif;
+            font-style: normal;
+        }
+    }
+}
