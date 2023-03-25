@@ -5,10 +5,8 @@
     flex-direction: column;
     min-height: 100dvh;
     gap: 16px;
-    background-image: url(/images/background-img.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: none;
+    background: transparent;
 
     .title {
         font-family:'PP Neue Montreal Bold', sans-serif;
