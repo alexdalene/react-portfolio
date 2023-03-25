@@ -5,22 +5,26 @@
     flex-direction: column;
     min-height: 100dvh;
     gap: 16px;
+    background-image: url(/images/background-img.jpg);
+    background-position: center;
+    background-size: cover;
 
     .title {
         font-family:'PP Neue Montreal Bold', sans-serif;
         font-size: 54px;
         line-height: 0.8;
-        border-bottom: 1.5px solid white;
+        // border-bottom: 1.5px solid white;
+        color: hsl(52, 100%, 50%);
+        max-width: 205px;
+    }
+
+    .line {
+        width: 205px;
     }
 
     .paragraph {
         font-family: 'PP Neue Montreal Book', sans-serif;
         font-size: 24px;
         max-width: 205px;
-
-        em {
-            font-family: 'PP Neue Montreal Bold', sans-serif;
-            font-style: normal;
-        }
     }
 }
