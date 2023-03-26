@@ -25,7 +25,7 @@ export default function Section() {
             variants={ container }
             initial='hidden' 
             whileInView='show'
-            viewport={{ once: true }}>
+            viewport={{ once: true, margin: '-100px 0px' }}>
                 <motion.div variants={ children }>
                 <Image src="/svg/first-template.svg" alt="" width='200' height='200'/>
                 </motion.div>

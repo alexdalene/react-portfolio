@@ -1,0 +1,31 @@
+.nav {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px;
+    z-index: 100;
+
+
+    .links {
+        list-style: none;
+        display: flex;
+        gap: 24px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-family: 'PP Neue Montreal Bold', sans-serif;
+                box-sizing: border-box;
+                padding: 10px;
+                border: 1px solid white;
+                transition: 200ms ease;
+    
+                &:hover,&:focus {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+    }
+}

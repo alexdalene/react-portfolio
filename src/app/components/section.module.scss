@@ -11,6 +11,10 @@
     padding: 0 16px;
     overflow: hidden;
 
+    @media (min-width: 600px) {
+        align-items: center;
+    }
+
     .templates {
         display: flex;
         gap: 16px;
@@ -24,5 +28,9 @@
         font-family: 'Ubuntu Bold', sans-serif;
         font-size: 32px;
         line-height: 1.5;
+
+        @media (min-width: 840px) {
+            font-size: 40px;
+        }
     }
 }
