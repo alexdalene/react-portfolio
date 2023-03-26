@@ -6,9 +6,9 @@
     gap: 4rem;
     padding: 5rem 0;
     margin: 0 auto;
-    background-color: rgba($color: #000000, $alpha: 0.4);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
 }
 
 .project {
@@ -16,7 +16,7 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 10px;
-    padding: 0 16px;
+    padding: 16px;
 
     .type {
         font-family: 'PP Neue Montreal Book', sans-serif;
@@ -51,17 +51,16 @@
         a {
             box-sizing: border-box;
             text-decoration: none;
-            background-color: #fff;
-            padding: 5px 10px;
-            border-radius: 9999px;
-            color: black;
+            color: #fff;
+            border-bottom: 1px solid white;
         }
     }
 
     .image {
         width: 100%;
         height: 250px;
-        align-self: flex-end;
         object-fit: cover;
+        object-position: top;
+        margin-top: 16px;
     }
 }

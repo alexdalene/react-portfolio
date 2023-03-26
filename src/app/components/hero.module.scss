@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100dvh;
+    min-height: 100lvh;
     gap: 16px;
     background-image: none;
     background: transparent;
@@ -12,13 +12,17 @@
         font-family:'PP Neue Montreal Bold', sans-serif;
         font-size: 54px;
         line-height: 0.8;
-        // border-bottom: 1.5px solid white;
         color: hsl(52, 100%, 50%);
         max-width: 205px;
+        background: -webkit-linear-gradient(#ffd034, #fbb71a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .line {
         width: 205px;
+        border: none;
+        border-top: 2px solid white;
     }
 
     .paragraph {
