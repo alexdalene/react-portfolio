@@ -26,14 +26,16 @@ const line = {
 function MakeProject({ type, title, description1, description2, url, gitLink, webLink}: { type: string, title: string, description1: string, description2: string, url: string, gitLink: string, webLink: string}) {
     return (
     <motion.section className={styles.project} variants={ container } initial='hidden' whileInView='show' viewport={{ once: true, margin: '-100px 0px' }}>
-        <motion.h4 className={styles.type} variants={ children } >{type ? type : "Default type"}</motion.h4>
-        <motion.h3 className={styles.title} variants={ children } >{title ? title : "Default title"}</motion.h3>
-        <motion.p className={styles.description} variants={ children } >{description1 ? description1 : "Default description"}</motion.p>
-        <motion.p className={styles.description} variants={ children } >{description2 ? description2 : "Default description"}</motion.p>
-        <motion.hr className={styles.line} variants={ line } />
-        <motion.div className={styles.imagesContainer} variants={ children } >
-        <Image className={styles.image} src={url} alt="" width='300' height='300'/>
-        </motion.div>
+        <motion.header className={styles.info}>
+            <motion.h4 className={styles.type} variants={ children } >{type ? type : "Default type"}</motion.h4>
+            <motion.h3 className={styles.title} variants={ children } >{title ? title : "Default title"}</motion.h3>
+            <motion.p className={styles.description} variants={ children } >{description1 ? description1 : "Default description"}</motion.p>
+            <motion.p className={styles.description} variants={ children } >{description2 ? description2 : "Default description"}</motion.p>
+            <motion.hr className={styles.line} variants={ line } />
+        </motion.header>
+            <motion.div className={styles.imagesContainer} variants={ children } >
+                <Image className={styles.image} src={url} alt="" width='300' height='300'/>
+            </motion.div>
         <motion.div className={styles.links} variants={ children } >
             <motion.a href={gitLink} target='_blank'>GitHub</motion.a>
             <motion.a href={webLink} target='_blank'>Website</motion.a>
@@ -48,7 +50,7 @@ export default function Project() {
         <MakeProject type='EXAM' 
         title='Science&nbsp;Museum' 
         description1='Exam through school. We had to follow a few requirements, like text and content - but had full control over design.' 
-        description2='I decided to go with a retro-futuristic look. I really wanted to challenge myself on this project.'
+        description2='I decided to go with a retro-futuristic look with a little brutalism.'
         url='/images/science-museum.jpg'
         gitLink='https://github.com/alexdalene/exam-des22'
         webLink='https://ad-science-museum.netlify.app/'

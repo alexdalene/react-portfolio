@@ -2,43 +2,50 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     min-height: 100lvh;
-    gap: 16px;
     background-image: none;
     background: transparent;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        max-width: 205px;
+        gap: 16px;
+
+        @media (min-width: 840px) {
+            max-width: 300px;
+        }
+    }
 
     .title {
         font-family:'PP Neue Montreal Bold', sans-serif;
         font-size: 54px;
         line-height: 0.8;
         color: hsl(49, 100%, 50%);
-        max-width: 205px;
+        width: 100%;
 
         @media (min-width: 840px) {
             font-size: 64px;
-            min-width: 300px;
         }
     }
 
     .line {
-        width: 205px;
         border: none;
         border-top: 2px solid white;
-
-        @media (min-width: 840px) {
-            min-width: 300px;
-        }
+        width: 100%;
     }
 
     .paragraph {
         font-family: 'PP Neue Montreal Book', sans-serif;
         font-size: 24px;
-        max-width: 205px;
+        width: 100%;
+
+        em {
+            font-style: normal;
+        }
 
         @media (min-width: 840px) {
             font-size: 32px;
-            max-width: 300px;
         }
     }
 }
