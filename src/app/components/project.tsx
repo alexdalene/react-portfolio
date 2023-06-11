@@ -61,17 +61,17 @@ export default function Project() {
         description1='This was our very first project using HTML and CSS. We later updated it to include REST API’s, making the products “real”.' 
         description2='Simplistic, modern and calming design - with a  focus on easy navigation.'
         url='/images/rainydays.jpg'
-        gitLink='https://github.com/alexdalene/rainydays-cms'
-        webLink='https://rainydays-cms-ad.netlify.app/'
+        gitLink='https://github.com/alexdalene/rainydays-ca'
+        webLink='https://rainydays-ca-ad.netlify.app/'
         ></MakeProject>
 
-        <MakeProject type='PROJECT' 
+        <MakeProject type='EXAM' 
         title='Wild&nbsp;at&nbsp;Risk' 
         description1='This was an exam where we had to use REST API’s to create a blog-like website. We were given a few requirements, but had full control over design.' 
         description2='I decided to go with a clean and modern design, with a focus on the content.'
         url='/images/wild-at-risk.png'
-        gitLink='https://github.com/alexdalene/react-portfolio.git'
-        webLink='https://lotr-assignment.netlify.app/'
+        gitLink='https://github.com/alexdalene/alex_dalene_exam1'
+        webLink='https://wildatrisk.netlify.app/'
         ></MakeProject>
         </div>
     )
