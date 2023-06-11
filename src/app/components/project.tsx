@@ -66,11 +66,11 @@ export default function Project() {
         ></MakeProject>
 
         <MakeProject type='PROJECT' 
-        title='LotR&nbsp;API' 
-        description1='First real project I used REST API’s with. Found a free Lord of the Rings API that had almost everything I wanted.' 
-        description2='Went for a more modern-sleek look, inspired by material-design and GitHub.'
-        url='/images/lotr-api.png'
-        gitLink='https://github.com/alexdalene/api-course-assignment'
+        title='Wild&nbsp;at&nbsp;Risk' 
+        description1='This was an exam where we had to use REST API’s to create a blog-like website. We were given a few requirements, but had full control over design.' 
+        description2='I decided to go with a clean and modern design, with a focus on the content.'
+        url='/images/wild-at-risk.png'
+        gitLink='https://github.com/alexdalene/react-portfolio.git'
         webLink='https://lotr-assignment.netlify.app/'
         ></MakeProject>
         </div>
